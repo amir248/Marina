@@ -1,30 +1,57 @@
 document.querySelector("#date").innerHTML='2024';
-document.querySelector("#displayList").innerHTML='one from five';
+document.querySelector("#displayList").innerHTML='one from eight';
 const state={};
 let overflow=+0;
 let lengthMargin=570;
-document.querySelector('#leftArrow').addEventListener('click',()=>{
-  overflow=overflow-lengthMargin;
-  console.log('oK');
-  if(lengthMargin==-470){
+state.click=+0;
+state.overflow=+0;
+state.overflowClick=+0;
 
-    newBoxis();
+function statusOverflow(){
+  if(state.overflow==-1100){
+    state.overflow=1100;
+  }else if(state.overflow==1100){
+    state.overflow=-1100;
   }
-  document.querySelector(".boxis:nth-child(1)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow}`+"px;"
+}
+document.querySelector('#leftArrow').addEventListener('click',()=>{
+  // overflow=overflow-lengthMargin;
+  state.overflowClick--;
+  console.log('oK '+state.overflow+" _ "+state.overflowClick);
+  state.overflow=state.overflow-550;
+  statusOverflow();
+  document.querySelector("div.boxis:nth-child(1)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${state.overflow}`+"px;";
+  // document.querySelector(".boxis:nth-child(2)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow2}`+"px;";
+  // document.querySelector(".boxis:nth-child(3)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow3}`+"px;";
+  // document.querySelector(".boxis:nth-child(4)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow4}`+"px;";
+  // document.querySelector(".boxis:nth-child(5)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[5]}`+"px;";
+  // document.querySelector(".boxis:nth-child(6)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[6]}`+"px;";
+  // document.querySelector(".boxis:nth-child(7)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[7]}`+"px;";
+  // document.querySelector(".boxis:nth-child(8)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[8]}`+"px;";
 });
 document.querySelector('#rightArrow').addEventListener('click',()=>{
-  console.log('right');
-  overflow=overflow+lengthMargin;
-  document.querySelector(".boxis:nth-child(1)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow}`+"px;";
-
+  state.overflowClick++;
+  console.log('right '+state.overflow+" _ "+state.overflowClick);
+  // overflow=overflow+lengthMargin;
+  // document.querySelector(".boxis:nth-child(1)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow}`+"px;";
+  state.overflow=state.overflow+550;
+  statusOverflow();
+  document.querySelector(".boxis:nth-child(1)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${state.overflow}`+"px;";
+  // document.querySelector(".boxis:nth-child(2)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[2]}`+"px;";
+  // document.querySelector(".boxis:nth-child(3)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[3]}`+"px;";
+  // document.querySelector(".boxis:nth-child(4)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[4]}`+"px;";
+  // document.querySelector(".boxis:nth-child(5)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[5]}`+"px;";
+  // document.querySelector(".boxis:nth-child(6)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[6]}`+"px;";
+  // document.querySelector(".boxis:nth-child(7)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[7]}`+"px;";
+  // document.querySelector(".boxis:nth-child(8)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[8]}`+"px;";
 });
-
+//remover
 function newBoxis(lengthMargin){
   let newBoxi=document.createElement('div');
   newBoxi.className='boxis';
   document.querySelector('#sliderSection').prepend(newBoxi);
-}
-state.click=+0;
+};
+//-----------
 document.querySelector('.menu').addEventListener('click',()=>{
   state.click++;
   if(state.click===1){
