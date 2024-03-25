@@ -52,11 +52,42 @@ nav{
   max-width: 1920px;
   font-size: 16px;
   font-family: "Open Sans";
-
+  transition: all 1s ease-out;
 }
 @media(max-width:700px){
-  nav > span{
-    display:none
+  nav > #oK{
+    display:none;
+  }
+   #one{
+    display:block;
+    width:37px;
+    height:3px;
+    background: rgba(186, 226, 73, 1);
+    transition: all 1s ease-out;
+  }
+  #two{
+   display:block;
+   width:37px;
+   height:3px;
+   background: rgba(186, 226, 73, 1);
+   transition: all 1s ease-out;
+ }
+   #three{
+    display:block;
+    width:37px;
+    height:3px;
+    background: rgba(186, 226, 73, 1);
+    transition: all 1s ease-out;
+  }
+  .menu{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width:37px;
+    height: 33px;
+    transition: all 1s ease-out;
+    z-index: 1;
   }
 }
 nav > strong{
@@ -289,4 +320,8 @@ footer{
 }
 .socialMedia > img{
   margin:1%;
+}
+#XXX > a{
+  margin:3%;
+  color:rgba(186, 226, 73, 1);
 }
