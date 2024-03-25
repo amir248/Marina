@@ -8,9 +8,9 @@ state.overflow=+0;
 state.overflowClick=+0;
 
 function statusOverflow(){
-  if(state.overflow==-1100){
+  if(state.overflow==-1650){
     state.overflow=1100;
-  }else if(state.overflow==1100){
+  }else if(state.overflow==1650){
     state.overflow=-1100;
   }
 }
