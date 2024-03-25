@@ -24,29 +24,46 @@
         <div class="">
           <h1>Крупнейшая aутсерсинговая компания бухгалтерских услуг!</h1>
           <p>Являясь частью общей картины, интерактивные прототипы, которые представляют собой яркий пример европейского типа политической и социальной культуры.</p>
-          <strong>Подробнее <span id='arrow'></span> </strong>
+          <div class="moreDetails">
+              <strong>Подробнее
+                <span class='line'></span> <span class="arrow right"></span>
+              </strong>
+          </div>
         </div>
       </header>
       <article>
-        <section>
+        <section id="sliderSection">
           <div class="boxis">
             <img src="img/uslug.webp" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <h3>Article</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <button type="button" name="button">Подробнее</button>
+          </div>
+          <div class="boxis">
+            <img src="img/optimased.webp" alt="">
+            <h3>Article</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <button type="button" name="button">Подробнее</button>
           </div>
           <div class="boxis">
             <img src="img/uslug.webp" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <h3>Article</h3>
+            <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <button type="button" name="button">Подробнее</button>
           </div>
           <div class="boxis">
             <img src="img/uslug.webp" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          </div>
-          <div class="boxis">
-            <img src="img/uslug.webp" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <h3>Article</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button type="button" name="button">Подробнее</button>
           </div>
         </section>
-        <section>
+        <div class="listing">
+          <img src="img/arrowLeft.svg" alt="listing left" id="leftArrow">
+          <span id="displayList"></span>
+          <img src="img/arrowRight.svg" alt="listing right" id="rightArrow">
+        </div>
+        <section class="twoSection">
           <h2>Новый заголовок</h2>
           <div class="rows">
 
@@ -58,8 +75,27 @@
               <strong>Читать далее </strong>
             </div>
           </div>
+
+        </section>
+        <section class="threeSection">
+          <div class="">
+            <h2>Help prodgect</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          </div>
         </section>
       </article>
+      <div class="socialMedia">
+        <img src="img/youtube.svg" alt="">
+        <img src="img/inst.svg" alt="">
+        <img src="img/face.svg" alt="">
+        <img src="img/twit.svg" alt="">
+      </div>
+      <footer>
+
+        <div>Marina <span>&COPY;</span> <span id="date"></span> </div>
+      </footer>
     </main>
   </body>
+  <script type="text/javascript" src="javascript.js"></script>
 </html>
