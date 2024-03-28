@@ -7,18 +7,41 @@ state.click=+0;
 state.overflow=+0;
 state.overflowClick=+0;
 
+
 function statusOverflow(){
-  if(state.overflow==-1650){
-    state.overflow=1100;
-  }else if(state.overflow==1650){
-    state.overflow=-1100;
+  console.log(state.overflow);
+  let fun=state.overflow*(-8);
+  if(state.overflow==innerWidth||state.overflow>=innerWidth){
+    console.log(state.overflow*(-8)+'oooo');
+    state.overflow=state.overflow*(-8);
+  }else if(state.overflow==fun){
+    state.overflow=innerWidth;
+  }
+  if(innerWidth<500){
+    console.log(innerWidth);
+
+    // state.overflow=state.overflow-innerWidth;
+  }else{
+    if(state.overflow==-1650){
+      state.overflow=1100;
+    }else if(state.overflow==1650){
+      state.overflow=-1100;
+    }
+
   }
 }
 document.querySelector('#leftArrow').addEventListener('click',()=>{
   // overflow=overflow-lengthMargin;
   state.overflowClick--;
-  console.log('oK '+state.overflow+" _ "+state.overflowClick);
-  state.overflow=state.overflow-550;
+  console.log('Left '+state.overflow+" _ "+state.overflowClick);
+  if(innerWidth<500){
+
+    state.overflow=state.overflow-innerWidth;
+    console.log(innerWidth + " _ "+ state.overflow);
+
+  }else{
+    state.overflow=state.overflow-550;
+  }
   statusOverflow();
   document.querySelector("div.boxis:nth-child(1)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${state.overflow}`+"px;";
   // document.querySelector(".boxis:nth-child(2)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow2}`+"px;";
@@ -34,7 +57,12 @@ document.querySelector('#rightArrow').addEventListener('click',()=>{
   console.log('right '+state.overflow+" _ "+state.overflowClick);
   // overflow=overflow+lengthMargin;
   // document.querySelector(".boxis:nth-child(1)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow}`+"px;";
-  state.overflow=state.overflow+550;
+  if(innerWidth<500){
+    console.log(innerWidth);
+    state.overflow=state.overflow+innerWidth;
+  }else{
+    state.overflow=state.overflow+550;
+  }
   statusOverflow();
   document.querySelector(".boxis:nth-child(1)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${state.overflow}`+"px;";
   // document.querySelector(".boxis:nth-child(2)").style.cssText="animation-name:sliden;animation-duration: 4s;margin-left:"+`${overflow[2]}`+"px;";
